@@ -1,0 +1,75 @@
+= My lecture notes
+firstname lastname
+1.0.0, yyyy-mm-dd: Some notes
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Github merge conflicts
+
+=== Adding a new ssh key for my github account +
+
+   cd home/.ssh
+   ssh -keygen -t rsa
+
+- copy your own public key
+- go to settings on github -> +
+SSH and gpg keys +
+- click on new SSH key button and add paste the key then click on add new SSH key
+
+
+
+=== clone peter's repository
+
+- create a new directory in your home directory. The name of the new directory is "work"
+- go to github and clone the repository from Peter klose using the ssh-link  +
+
+  git clone git@github.com:P-Klose/3bhitm-github-lab-branches.git
+
+
+=== add, commit, push and pull
+
+- go to the 3bhitm-github-lab-branches repository and make some changes then commit your changes and push your data to the remote repository +
+
+
+  echo "##hello Peter" >> README.md
+  git add .
+  git commit -m "hello Peter"
+  git push
+
+. if you or your partner (Peter) do not have the latest changes on your working copy, you should write this command
+
+  git pull
+
+
+
+=== handling merge conflict
+- if you get this error
+
+   error: failed to push some refs to 'git@github.com:P-Klose/3bhitm-github-lab-branches.git'
+
+
+-  Do not think about writing +
+
+    git pull
+
+
+
+- open intellij and click on the Update Project button
+- add the missing parts to your code   +
+- push your code
+
+
+
+
